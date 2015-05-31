@@ -4,7 +4,8 @@
   "description": "A React integration of Purecss.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --compilers .jsx:test/compiler.js test/*Spec.js",
+    "bdd": "mocha --watch --reporter=min --compilers .jsx:test/compiler.js test/*Spec.js"
   },
   "author": "Rezzza",
   "license": "MIT",
@@ -19,13 +20,17 @@
     "gulp": "~3.8.11",
     "gulp-gh-pages": "~0.5.1",
     "gulp-util": "~3.0.5",
+    "jsdom": "~5.4.3",
+    "mocha-jsdom": "~0.4.0",
     "react": "~0.13.3",
+    "react-tools": "~0.13.3",
     "reactify": "~1.1.1",
     "run-sequence": "~1.1.0",
     "vinyl-source-stream": "~1.1.0",
     "vinyl-transform": "~1.0.0"
   },
   "dependencies": {
-    "classnames": "~2.1.2"
+    "classnames": "~2.1.2",
+    "node-jsx": "~0.13.3"
   }
 }
