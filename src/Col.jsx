@@ -3,6 +3,7 @@
 var React = require('react');
 var classnames = require('classnames');
 
+// Todo: validate the grid unit size.
 //var units = [
 //    // 5ths-Based Units
 //    {'1-5': 1 / 5},
@@ -25,18 +26,20 @@ var Col = React.createClass({
         extraLargeSize: React.PropTypes.string
     },
 
-    defaultProps: {
-        defaultSize: 1
+    getDefaultProps: function() {
+        return {
+            defaultSize: 1
+        };
     },
 
-        render: function () {
+    render: function () {
         var classNames = classnames(
-            this.props.className,
-            this.props.defaultSize && this.prepareSize('pure-u-', this.props.defaultSize),
-            this.props.smallSize && this.prepareSize('pure-u-sm-', this.props.smallSize),
-            this.props.mediumSize && this.prepareSize('pure-u-md-', this.props.mediumSize),
-            this.props.largeSize && this.prepareSize('pure-u-lg-', this.props.largeSize),
-            this.props.extraLargeSize && this.prepareSize('pure-u-xl-', this.props.extraLargeSize)
+            this.props.defaultSize && Col.prepareSize('pure-u-', this.props.defaultSize),
+            this.props.smallSize && Col.prepareSize('pure-u-sm-', this.props.smallSize),
+            this.props.mediumSize && Col.prepareSize('pure-u-md-', this.props.mediumSize),
+            this.props.largeSize && Col.prepareSize('pure-u-lg-', this.props.largeSize),
+            this.props.extraLargeSize && Col.prepareSize('pure-u-xl-', this.props.extraLargeSize),
+            this.props.className
         );
 
         return (
@@ -46,7 +49,7 @@ var Col = React.createClass({
 });
 
 Col.prepareSize = function (prefix, size) {
-    return prefix + '-' + size;
+    return prefix + size;
 };
 
 module.exports = Col;
