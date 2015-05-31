@@ -2,6 +2,7 @@
   "name": "react-purecss",
   "version": "0.0.1",
   "description": "A React integration of Purecss.",
+  "repository": "rezzza/react-purecss",
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers .jsx:test/compiler.js test/*Spec.js",
