@@ -10,6 +10,7 @@
   "author": "Rezzza",
   "license": "MIT",
   "peerDependencies": {
+    "purecss": "~0.6.0",
     "react": "~0.13.3"
   },
   "devDependencies": {
