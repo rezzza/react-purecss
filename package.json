@@ -12,7 +12,7 @@
     "css"
   ],
   "repository": "rezzza/react-purecss",
-  "main": "dist/index.js",
+  "main": "build/index.js",
   "scripts": {
     "build": "gulp build",
     "test": "npm run build && mocha --compilers js:babel-core/register test/*Spec.js"
