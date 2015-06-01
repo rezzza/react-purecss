@@ -3,13 +3,12 @@
 var gulp = require('gulp');
 var del = require('del');
 var runSequence = require('run-sequence');
-var ghPages = require('gulp-gh-pages');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var exorcist = require('exorcist');
 var path = require('path');
 
-gulp.task('dist', function (cb) {
+gulp.task('build', function (cb) {
     runSequence(
         'clean',
         'compile',
@@ -24,22 +23,17 @@ gulp.task('compile', function (cb) {
     });
 
     b.external('react');
-    b.transform('reactify');
+    b.transform('babelify');
 
     return b.bundle()
-        .pipe(exorcist(path.join(__dirname, 'dist/react-purecss.js.map')))
+        .pipe(exorcist(path.join(__dirname, 'build/react-purecss.js.map')))
         .pipe(source('react-purecss.js'))
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./build'))
 });
 
 gulp.task('clean', function (cb) {
     del([
-        './dist/**/*',
-        '!./dist/.gitkeep'
+        './build/**/*',
+        '!./build/.gitkeep'
     ], cb);
-});
-
-gulp.task('deploy', function () {
-    return gulp.src('./dist/**/*')
-        .pipe(ghPages());
 });
