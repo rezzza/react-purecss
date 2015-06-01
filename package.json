@@ -1,7 +1,8 @@
 {
   "name": "react-purecss",
   "version": "0.0.1",
-  "description": "A React integration of Purecss.",
+  "description": "Yahoo's purecss library integration with react.",
+  "keywords": ["react", "react-component", "pure", "purecss", "yahoo", "isomorphic", "css"],
   "repository": "rezzza/react-purecss",
   "main": "index.js",
   "scripts": {
