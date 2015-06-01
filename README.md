@@ -1,7 +1,8 @@
 # react-purecss
 
-Yahoo's purecss library integration with react.
+[![Travis](https://img.shields.io/travis/rezzza/react-purecss.svg)](https://travis-ci.org/rezzza/react-purecss)
 
+Yahoo's purecss library integration with react.
 
 
 ## Installation
