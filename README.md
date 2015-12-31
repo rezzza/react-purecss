@@ -1,9 +1,12 @@
+# DEPRECATED
+
+This module is abandoned. If you want you want to work on it feel free to make PR.
+
 # react-purecss
 
 [![Travis](https://img.shields.io/travis/rezzza/react-purecss.svg)](https://travis-ci.org/rezzza/react-purecss) [![npm](https://img.shields.io/npm/v/react-purecss.svg)](https://www.npmjs.com/package/react-purecss)
 
 Yahoo's purecss library integration with react.
-
 
 ## Installation
 
